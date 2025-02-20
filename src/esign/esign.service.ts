@@ -1,3 +1,4 @@
+// src/esign/esign.service.ts
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
@@ -124,14 +125,6 @@ export class EsignService {
 
   async role2SignAndUpdate(payload: any): Promise<any> {
     const apiUrl = 'https://sandbox.opensignlabs.com/api/role2';
-    const response: AxiosResponse<any> = await firstValueFrom(
-      this.httpService.post<any>(apiUrl, payload),
-    );
-    return response.data;
-  }
-
-  async role3Sign(payload: any): Promise<any> {
-    const apiUrl = 'https://sandbox.opensignlabs.com/api/role3';
     const response: AxiosResponse<any> = await firstValueFrom(
       this.httpService.post<any>(apiUrl, payload),
     );

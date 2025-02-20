@@ -101,12 +101,4 @@ export class EsignController {
       console.log(error.message);
     }
   }
-
-  // Role 3 completes the signing process
-  @Post('role3')
-  async role3Action(@Body() body: any) {
-    const payload = { documentId: body.documentId };
-    const result = await this.esignService.role3Sign(payload);
-    return result;
-  }
 }
