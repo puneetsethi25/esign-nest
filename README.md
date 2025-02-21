@@ -18,7 +18,14 @@ $ npm install
 ```
 
 ## Compile and run the project
-
+**Pre-requisites**: 
+- Copy/Rename the file `.env.sample` to `.env.local`
+- Add an `API_TOKEN` in the `.env.[your_env]` file at the bottom. For eg. if you are running on `local` environment, then  in your `.env.local`, add the value for `API_TOKEN` such as:
+```
+API_TOKEN=YOUR_TOKEN_VALUE
+API_BASE_URL=https://sandbox.opensignlabs.com/api/v1/
+```
+****
 ```bash
 # start dev with watch mode
 $ npm run start:dev
@@ -63,5 +70,5 @@ $ npm run test:cov
 - Once Role 2 has signed and updated Role 3's email, a signing URL for Role 3 is generated and sent to the provided email (for testing purposes, this link is displayed on the UI).
 ##### Completion:
 - Role 3 clicks the signing URL to digitally sign the document via the OpenSign UI. After signing, the document is marked as finished in the OpenSign dashboard.
-
+****
 Note: For testing purposes, the signing URLs for both Role 2 and Role 3 are displayed on the same page. In a production implementation, these links would typically be sent to the appropriate email addresses.
