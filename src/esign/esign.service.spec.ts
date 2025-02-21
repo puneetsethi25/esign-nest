@@ -14,8 +14,8 @@ describe('EsignService', () => {
           isGlobal: true,
           load: [
             () => ({
-              API_TOKEN: 'test-token',
-              API_BASE_URL: 'https://sandbox.opensignlabs.com/api/v1/',
+              API_TOKEN: 'API_TOKEN',
+              API_BASE_URL: 'API_BASE_URL',
             }),
           ],
         }),

@@ -91,14 +91,14 @@ export class EsignController {
         sender_email: 'mailer@opensignlabs.com',
         allow_modifications: false,
       };
-      console.log(documentPayload);
       const result = await this.esignService.createDocumentFromTemplateId(
         body.templateId,
         documentPayload,
       );
       return result;
     } catch (error) {
-      console.log(error.message);
+      console.error(error.message);
+      throw error.message;
     }
   }
 }
